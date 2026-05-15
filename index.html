@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexiq Home - Premium Coffee Shop & Types Guide</title>
+    <meta name="description" content="Discover the finest coffee varieties and brewing methods at Nexiq Home. Explore our comprehensive guide to coffee types, origins, and preparation techniques. Click here to continue your coffee journey.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #fafaf8;
+        }
+
+        .navbar_kx7m {
+            background: linear-gradient(135deg, #6f4e37 0%, #8b6f47 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav_container_q2p {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo_text_m8k {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav_menu_r5j {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav_menu_r5j a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav_menu_r5j a:hover {
+            color: #f4d4a8;
+        }
+
+        .hero_section_b9x {
+            background: linear-gradient(rgba(111, 78, 55, 0.8), rgba(139, 111, 71, 0.8)), url('https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero_content_t3l {
+            max-width: 800px;
+        }
+
+        .hero_content_t3l h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero_content_t3l p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta_button_w4n {
+            display: inline-block;
+            background-color: #d4a574;
+            color: #2c2c2c;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta_button_w4n:hover {
+            background-color: #e8c4a0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .container_main_h7f {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section_block_v2k {
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+
+        .section_block_v2k h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #6f4e37;
+            text-align: center;
+        }
+
+        .section_block_v2k p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .coffee_types_grid_p8q {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .coffee_card_j3m {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .coffee_card_j3m:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card_image_x6l {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card_content_n1p {
+            padding: 1.5rem;
+        }
+
+        .card_content_n1p h3 {
+            color: #6f4e37;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .card_content_n1p p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .history_timeline_d4c {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline_item_k9w {
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+            border-left: 3px solid #d4a574;
+            position: relative;
+        }
+
+        .timeline_item_k9w::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background: #6f4e37;
+            border-radius: 50%;
+            border: 3px solid #fafaf8;
+        }
+
+        .timeline_item_k9w h3 {
+            color: #6f4e37;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .timeline_item_k9w p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .review_section_f5r {
+            background: #f5f1ed;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .review_grid_c8t {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .review_card_s2l {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .review_card_s2l .stars_b7h {
+            color: #d4a574;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .review_card_s2l p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .reviewer_name_q3x {
+            font-weight: 600;
+            color: #6f4e37;
+            font-size: 0.95rem;
+        }
+
+        .footer_main_z1m {
+            background: #3d2817;
+            color: #fff;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer_content_a4b {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer_section_e9j h3 {
+            margin-bottom: 1rem;
+            color: #d4a574;
+            font-size: 1.1rem;
+        }
+
+        .footer_section_e9j p, .footer_section_e9j a {
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .footer_section_e9j a:hover {
+            color: #d4a574;
+        }
+
+        .phone_link_m6k {
+            color: #d4a574;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .phone_link_m6k:hover {
+            text-decoration: underline;
+        }
+
+        .footer_bottom_r7p {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .modal_overlay_t5g {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal_overlay_t5g.active_x2m {
+            display: flex;
+        }
+
+        .modal_content_p9k {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .modal_close_b3j {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #6f4e37;
+        }
+
+        .modal_content_p9k h2 {
+            color: #6f4e37;
+            margin-bottom: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .modal_content_p9k h3 {
+            color: #8b6f47;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .modal_content_p9k p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .modal_content_p9k ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal_content_p9k li {
+            color: #555;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .brewing_methods_l2x {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .method_box_w8p {
+            background: linear-gradient(135deg, #f5f1ed 0%, #ede8e3 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #d4a574;
+        }
+
+        .method_box_w8p h4 {
+            color: #6f4e37;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .method_box_w8p p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .highlight_text_c5m {
+            background: #fff3e0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #d4a574;
+        }
+
+        .highlight_text_c5m p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .cta_link_inline_g4j {
+            color: #6f4e37;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 2px solid #d4a574;
+        }
+
+        .cta_link_inline_g4j:hover {
+            color: #8b6f47;
+        }
+
+        @media (max-width: 768px) {
+            .hero_content_t3l h1 {
+                font-size: 2rem;
+            }
+
+            .nav_menu_r5j {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .section_block_v2k h2 {
+                font-size: 1.8rem;
+            }
+
+            .modal_content_p9k {
+                margin: 1rem;
+                max-width: 90%;
+            }
+        }
+
+        .image_block_h3k {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .image_block_h3k img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content_divider_f1x {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4a574, transparent);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar_kx7m">
+        <div class="nav_container_q2p">
+            <a href="#home" class="logo_text_m8k">Nexiq Home Coffee</a>
+            <ul class="nav_menu_r5j">
+                <li><a onclick="scrollToSection('coffee-types')">Coffee Types</a></li>
+                <li><a onclick="scrollToSection('brewing')">Brewing Methods</a></li>
+                <li><a onclick="scrollToSection('origins')">Origins</a></li>
+                <li><a onclick="scrollToSection('history')">Our History</a></li>
+                <li><a onclick="scrollToSection('reviews')">Reviews</a></li>
+                <li><a onclick="openModal('privacy')">Privacy</a></li>
+                <li><a onclick="openModal('terms')">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero_section_b9x" id="home">
+        <div class="hero_content_t3l">
+            <h1>Welcome to Nexiq Home</h1>
+            <p>Discover the world's finest coffee varieties, brewing techniques, and the rich heritage behind every cup. Your journey into exceptional coffee begins here. <span class="cta_link_inline_g4j" onclick="scrollToSection('coffee-types')">Click here to continue</span> exploring our comprehensive coffee guide.</p>
+            <button class="cta_button_w4n" onclick="scrollToSection('coffee-types')">Explore Coffee Types</button>
+        </div>
+    </section>
+
+    <!-- Coffee Types Section -->
+    <section class="section_block_v2k" id="coffee-types">
+        <div class="container_main_h7f">
+            <h2>Discover Our Coffee Varieties</h2>
+            <p>At Nexiq Home, we celebrate the diversity of coffee from around the globe. Each variety brings its own unique characteristics, flavor profiles, and brewing possibilities. Our collection represents centuries of cultivation expertise and passion for the perfect cup. Whether you're a seasoned coffee enthusiast or just beginning your journey, understanding different coffee types is essential to finding your perfect match. Kenyamatan kopi dimulai dengan pemahaman mendalam tentang asal-usul dan proses pengolahan biji kopi. Kami menyediakan panduan lengkap untuk membantu Anda membuat pilihan yang tepat. <span class="cta_link_inline_g4j" onclick="scrollToSection('origins')">Click here to continue</span> learning about coffee origins.</p>
+            
+            <div class="coffee_types_grid_p8q">
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Arabica Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Arabica Beans</h3>
+                        <p>Comprising approximately 60-70% of global coffee production, Arabica beans are renowned for their smooth, nuanced flavors with subtle acidity. These beans thrive at higher altitudes and produce complex taste profiles with notes of fruit, flowers, and chocolate. The cultivation process requires meticulous attention to environmental conditions, making Arabica a favorite among connoisseurs worldwide.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Robusta Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Robusta Beans</h3>
+                        <p>Robusta beans account for about 30-40% of world coffee production and are known for their bold, strong flavor with higher caffeine content. These hardy beans are more resistant to pests and diseases, making them easier to cultivate. They produce a full-bodied cup with earthy undertones and are often used in espresso blends for their crema-producing qualities and robust character.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Liberica Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Liberica Beans</h3>
+                        <p>Representing less than 2% of global coffee production, Liberica beans are a rare and distinctive variety. These beans produce a unique smoky, woody flavor with hints of leather and spice. Liberica coffee has a distinctive appearance with larger beans and an asymmetrical shape. It's particularly popular in certain regions and offers adventurous coffee drinkers an intriguing alternative experience.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Excelsa Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Excelsa Beans</h3>
+                        <p>Excelsa beans, technically a subspecies of Liberica, make up about 7% of world coffee production. These beans are primarily grown in Southeast Asia and produce a distinctive tart, fruity flavor with smoky undertones. The beans are larger than most varieties and offer a complex taste profile that works exceptionally well in blends, adding depth and character to coffee compositions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_divider_f1x"></div>
+
+            <div class="image_block_h3k">
+                <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Coffee Beans Collection">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewing Methods Section -->
+    <section class="section_block_v2k" id="brewing">
+        <div class="container_main_h7f">
+            <h2>Brewing Methods & Techniques</h2>
+            <p>The method you choose to brew your coffee significantly impacts the final taste and experience. Different brewing techniques extract flavors differently, allowing you to customize your coffee experience based on your preferences and available equipment. From traditional methods passed down through generations to modern innovations, each technique offers unique advantages. Metode penyeduhan kopi telah berkembang selama berabad-abad, dengan setiap budaya mengembangkan pendekatan uniknya sendiri. Kami menyediakan panduan terperinci untuk membantu Anda menguasai berbagai teknik penyeduhan dan menemukan metode favorit Anda.</p>
+
+            <div class="brewing_methods_l2x">
+                <div class="method_box_w8p">
+                    <h4>Pour Over Method</h4>
+                    <p>The pour over technique involves pouring hot water over ground coffee in a filter, allowing gravity to extract the flavors. This method provides excellent control over brewing time and water temperature, resulting in a clean, bright cup with well-defined flavors. Popular pour over devices include Chemex, V60, and Melitta cones.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>French Press</h4>
+                    <p>French press brewing involves steeping coarsely ground coffee in hot water for several minutes before pressing down a metal filter. This immersion method produces a full-bodied cup with rich flavors and natural oils. The French press is ideal for those who prefer a more robust, textured coffee experience with minimal equipment required.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>Espresso Machine</h4>
+                    <p>Espresso machines force hot water through finely ground coffee under high pressure, creating a concentrated shot with a distinctive crema layer. This method requires precision and practice but produces intense, complex flavors. Espresso serves as the base for many popular coffee drinks including cappuccinos, lattes, and americanos.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>AeroPress</h4>
+                    <p>The AeroPress combines immersion and pressure brewing in a compact, portable device. It produces a smooth, clean cup with excellent flavor clarity. This method is favored by travelers and coffee enthusiasts who appreciate its versatility, quick brewing time, and ability to produce consistent results with minimal cleanup.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>Turkish Coffee</h4>
+                    <p>Turkish coffee involves finely grinding beans and brewing them in a special pot called a cezve or ibrik. The coffee is heated slowly, creating a thick, rich beverage with a distinctive foam. This ancient method remains popular in Middle Eastern and Mediterranean cultures and produces an intensely flavored, full-bodied cup.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>Cold Brew</h4>
+                    <p>Cold brew involves steeping coarsely ground coffee in cold water for 12-24 hours. This slow extraction method produces a smooth, less acidic concentrate that can be diluted with water or milk. Cold brew is perfect for hot weather and offers a refreshing alternative to traditional hot coffee beverages.</p>
+                </div>
+            </div>
+
+            <div class="highlight_text_c5m">
+                <p><strong>Pro Tip:</strong> The key to excellent coffee is using fresh, quality beans and maintaining proper water temperature (195-205°F or 90-96°C). Experiment with different brewing methods to discover which technique best suits your taste preferences and lifestyle. <span class="cta_link_inline_g4j" onclick="scrollToSection('origins')">Click here to continue</span> exploring coffee origins and their unique characteristics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Origins Section -->
+    <section class="section_block_v2k" id="origins">
+        <div class="container_main_h7f">
+            <h2>Coffee Origins Around the World</h2>
+            <p>Coffee cultivation spans across the globe, with each region producing beans with distinct characteristics influenced by climate, altitude, soil composition, and local farming practices. Understanding coffee origins helps you appreciate the terroir—the environmental factors that shape flavor profiles. The journey from seed to cup involves countless hands and generations of expertise. Setiap wilayah penghasil kopi memiliki cerita unik tentang bagaimana mereka mengembangkan dan menyempurnakan seni menanam kopi. Dari pegunungan tinggi Amerika Latin hingga dataran rendah Afrika, setiap daerah berkontribusi pada kekayaan global pengalaman kopi.</p>
+
+            <div class="image_block_h3k">
+                <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Coffee Plantations">
+            </div>
+
+            <div class="coffee_types_grid_p8q">
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ethiopian Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Ethiopian Coffee</h3>
+                        <p>Ethiopia is considered the birthplace of coffee, where the plant originated centuries ago. Ethiopian coffees are known for their fruity, floral notes with bright acidity. The country's diverse microclimates produce beans with varying flavor profiles, from berry-forward to wine-like characteristics. Ethiopian coffee culture remains deeply rooted in tradition and ceremony.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Colombian Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Colombian Coffee</h3>
+                        <p>Colombia is the world's largest producer of Arabica beans, known for their balanced flavor, medium body, and pleasant acidity. The country's mountainous terrain and ideal climate conditions create perfect growing environments. Colombian coffees often feature notes of chocolate, caramel, and nuts, making them popular worldwide for their consistency and quality.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Brazilian Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Brazilian Coffee</h3>
+                        <p>Brazil produces about one-third of the world's coffee supply, primarily Arabica and Robusta varieties. Brazilian coffees are characterized by low acidity, full body, and earthy, nutty flavors with hints of chocolate and spice. The country's vast plantations and advanced processing techniques ensure consistent quality and availability year-round.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Kenyan Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Kenyan Coffee</h3>
+                        <p>Kenyan coffee is renowned for its bright acidity, complex flavor profile, and distinctive fruity notes reminiscent of berries and citrus. Grown at high altitudes in volcanic soil, Kenyan beans develop exceptional depth and character. The country's coffee industry is built on quality standards and sustainable farming practices that honor the land.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Indonesian Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Indonesian Coffee</h3>
+                        <p>Indonesia produces a significant portion of the world's coffee, with Sumatra being particularly famous for its full-bodied, earthy beans with low acidity. Indonesian coffees often feature herbal, spicy, and woody notes. The unique wet-hulling processing method used in the region contributes to the distinctive flavor characteristics that coffee enthusiasts appreciate.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vietnamese Coffee" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Vietnamese Coffee</h3>
+                        <p>Vietnam is the world's second-largest coffee producer, primarily growing Robusta beans. Vietnamese coffee is known for its bold, strong flavor with earthy and slightly bitter notes. The traditional Vietnamese coffee culture, featuring dark roasts and sweetened condensed milk, has gained international popularity and represents a unique approach to coffee consumption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="section_block_v2k" id="history">
+        <div class="container_main_h7f">
+            <h2>Our Journey & Coffee Heritage</h2>
+            <p>Nexiq Home was founded on the principle that coffee is more than just a beverage—it's a connection to cultures, traditions, and people around the world. Our commitment to excellence and education has shaped our mission to bring authentic coffee experiences to enthusiasts everywhere. Perjalanan kami dimulai dengan visi sederhana untuk membuat kopi berkualitas tinggi dapat diakses oleh semua orang. Kami percaya bahwa setiap cangkir kopi menceritakan kisah tentang petani, tanah, dan dedikasi yang diperlukan untuk menghadirkan kesempurnaan ke meja Anda.</p>
+
+            <div class="history_timeline_d4c">
+                <div class="timeline_item_k9w">
+                    <h3>2010 - The Beginning</h3>
+                    <p>Nexiq Home was established by a group of passionate coffee enthusiasts who shared a common vision: to educate and inspire coffee lovers worldwide. Our founders traveled extensively through coffee-growing regions, building relationships with farmers and learning traditional cultivation and processing methods. This foundation of authentic knowledge became the cornerstone of our brand.</p>
+                </div>
+
+                <div class="timeline_item_k9w">
+                    <h3>2012 - First Coffee House</h3>
+                    <p>We opened our first physical location in a historic building downtown, creating a space where coffee culture could flourish. The café became a gathering place for coffee enthusiasts, students, and professionals. We implemented our educational philosophy by hosting cupping sessions, brewing demonstrations, and talks about coffee origins and sustainable farming practices.</p>
+                </div>
+
+                <div class="timeline_item_k9w">
+                    <h3>2015 - Expansion & Education</h3>
+                    <p>Recognizing the growing demand for coffee knowledge, we launched our comprehensive online educational platform. Nexiq Home Academy began offering courses on coffee appreciation, brewing techniques, and the science behind flavor extraction. Our digital presence expanded significantly, reaching coffee enthusiasts across continents who sought authentic, reliable information about coffee varieties and preparation methods.</p>
+                </div>
+
+                <div class="timeline_item_k9w">
+                    <h3>2018 - Sustainability Initiative</h3>
+                    <p>We committed to sustainable sourcing practices, establishing direct relationships with coffee farmers in multiple countries. Our sustainability initiative focuses on fair trade practices, environmental conservation, and supporting farming communities. We implemented traceability systems allowing customers to know exactly where their coffee originates and how it was produced.</p>
+                </div>
+
+                <div class="timeline_item_k9w">
+                    <h3>2021 - Global Recognition</h3>
+                    <p>Nexiq Home received international recognition for our contributions to coffee education and sustainable practices. Our platform became a trusted resource for coffee professionals and enthusiasts globally. We expanded our network to include partnerships with coffee farms, roasters, and equipment manufacturers, creating a comprehensive ecosystem for coffee culture.</p>
+                </div>
+
+                <div class="timeline_item_k9w">
+                    <h3>2024 - Present Day</h3>
+                    <p>Today, Nexiq Home continues to evolve as a leading authority in coffee education and appreciation. We maintain our commitment to quality, sustainability, and community engagement. Our mission remains unchanged: to inspire people to discover the extraordinary world of coffee and to support the communities that make it possible. <span class="cta_link_inline_g4j" onclick="scrollToSection('reviews')">Click here to continue</span> reading what our community members say about their experiences with us.</p>
+                </div>
+            </div>
+
+            <div class="image_block_h3k">
+                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Coffee House Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section_block_v2k" id="reviews">
+        <div class="container_main_h7f">
+            <div class="review_section_f5r">
+                <h2>What Our Community Says</h2>
+                <p>Our customers and students share their experiences and insights about their journey with Nexiq Home. These testimonials reflect our commitment to quality education, authentic coffee experiences, and building a supportive community of coffee enthusiasts.</p>
+
+                <div class="review_grid_c8t">
+                    <div class="review_card_s2l">
+                        <div class="stars_b7h">★★★★★</div>
+                        <p>"Nexiq Home transformed my understanding of coffee completely. I went from someone who just drank coffee to someone who truly appreciates the complexity and artistry involved. The educational resources are comprehensive and the community is incredibly welcoming. I've learned so much about different brewing methods and coffee origins."</p>
+                        <div class="reviewer_name_q3x">- Sarah Mitchell, Coffee Enthusiast</div>
+                    </div>
+
+                    <div class="review_card_s2l">
+                        <div class="stars_b7h">★★★★★</div>
+                        <p>"As a professional barista, I found Nexiq Home's advanced courses invaluable for deepening my expertise. The detailed information about coffee chemistry and extraction science helped me improve my craft significantly. The platform's commitment to accuracy and quality is evident in every aspect of their content."</p>
+                        <div class="reviewer_name_q3x">- Marcus Chen, Professional Barista</div>
+                    </div>
+
+                    <div class="review_card_s2l">
+                        <div class="stars_b7h">★★★★★</div>
+                        <p>"I appreciate Nexiq Home's dedication to sustainability and fair trade practices. Knowing that my coffee purchases support ethical farming communities makes the experience even more meaningful. Their transparency about sourcing and production methods is refreshing and builds trust with customers."</p>
+                        <div class="reviewer_name_q3x">- Jennifer Rodriguez, Conscious Consumer</div>
+                    </div>
+
+                    <div class="review_card_s2l">
+                        <div class="stars_b7h">★★★★★</div>
+                        <p>"The cupping sessions at Nexiq Home are phenomenal. I've learned to identify subtle flavor notes I never noticed before. The instructors are knowledgeable, patient, and genuinely passionate about sharing their expertise. It's a welcoming environment for both beginners and experienced coffee lovers."</p>
+                        <div class="reviewer_name_q3x">- David Thompson, Coffee Aficionado</div>
+                    </div>
+
+                    <div class="review_card_s2l">
+                        <div class="stars_b7h">★★★★★</div>
+                        <p>"Nexiq Home's online platform is incredibly user-friendly and comprehensive. I can learn at my own pace, and the content is always accurate and well-researched. The community forums are active and supportive, making it easy to connect with other coffee enthusiasts and share experiences."</p>
+                        <div class="reviewer_name_q3x">- Lisa Anderson, Online Student</div>
+                    </div>
+
+                    <div class="review_card_s2l">
+                        <div class="stars_b7h">★★★★★</div>
+                        <p>"I started my own coffee business after completing Nexiq Home's entrepreneurship course. The practical knowledge and industry connections I gained were instrumental in my success. The support from the Nexiq Home community continues to be invaluable as I grow my business."</p>
+                        <div class="reviewer_name_q3x">- Robert Kim, Coffee Business Owner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Content Section -->
+    <section class="section_block_v2k">
+        <div class="container_main_h7f">
+            <h2>Coffee Science & Flavor Profiles</h2>
+            <p>Understanding the science behind coffee flavor is essential for appreciating the complexity of this beloved beverage. The flavor profile of coffee is determined by numerous factors including bean variety, growing conditions, processing method, roast level, and brewing technique. Ilmu pengetahuan di balik rasa kopi melibatkan kimia kompleks, biologi tanaman, dan fisika ekstraksi. Ketika air panas bersentuhan dengan biji kopi yang digiling, ribuan senyawa kimia dilepaskan, menciptakan profil rasa yang unik dan kompleks.</p>
+
+            <div class="brewing_methods_l2x">
+                <div class="method_box_w8p">
+                    <h4>Acidity in Coffee</h4>
+                    <p>Coffee acidity refers to the bright, tangy qualities that add liveliness to the cup. High-altitude coffees typically have more acidity, contributing to their complexity. Acidity is not about pH level but rather the presence of organic acids that create pleasant, crisp flavors. Understanding acidity helps you choose coffees that match your taste preferences.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>Body & Mouthfeel</h4>
+                    <p>Body describes the weight and texture of coffee in your mouth. Factors like bean type, roast level, and brewing method influence body. Full-bodied coffees feel heavier and more viscous, while light-bodied coffees feel crisp and clean. The presence of oils and suspended particles contributes to the overall mouthfeel experience.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>Aroma & Fragrance</h4>
+                    <p>The aroma of coffee comes from volatile aromatic compounds released during roasting and brewing. These compounds significantly influence our perception of flavor, as much of what we taste actually comes from smell. Freshly ground coffee releases more aromatic compounds, which is why grinding just before brewing enhances the overall experience.</p>
+                </div>
+
+                <div class="method_box_w8p">
+                    <h4>Flavor Notes</h4>
+                    <p>Coffee flavor notes describe the subtle tastes you can detect, such as chocolate, fruit, nuts, or floral characteristics. These notes result from the chemical compounds present in the beans, influenced by origin, processing, and roasting. Developing your palate to identify these notes enhances your appreciation and enjoyment of different coffees.</p>
+                </div>
+            </div>
+
+            <div class="highlight_text_c5m">
+                <p><strong>Flavor Wheel Guide:</strong> The coffee flavor wheel is a useful tool for identifying and describing coffee tastes. It categorizes flavors into families like fruity, floral, nutty, and spicy. Using this standardized vocabulary helps coffee enthusiasts communicate their experiences and preferences more effectively. <span class="cta_link_inline_g4j" onclick="openModal('terms')">Click here to continue</span> reading our terms of service for more information about our platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="section_block_v2k">
+        <div class="container_main_h7f">
+            <h2>Sustainable Coffee Practices</h2>
+            <p>At Nexiq Home, we believe that sustainable coffee production is essential for the future of the industry and the well-being of farming communities. Our commitment to sustainability encompasses environmental conservation, fair compensation for farmers, and support for local economies. Praktik kopi berkelanjutan melibatkan pertanian yang bertanggung jawab, pengolahan yang ramah lingkungan, dan perdagangan yang adil. Kami bekerja sama dengan petani untuk mengimplementasikan teknik pertanian yang melestarikan tanah dan ekosistem sambil menghasilkan kopi berkualitas tinggi.</p>
+
+            <div class="image_block_h3k">
+                <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sustainable Coffee Farming">
+            </div>
+
+            <div class="coffee_types_grid_p8q">
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fair Trade" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Fair Trade Certification</h3>
+                        <p>Fair trade certification ensures that coffee farmers receive fair compensation for their work and that production meets strict environmental and social standards. By supporting fair trade coffee, consumers directly contribute to improving the lives of farming families and promoting sustainable agricultural practices in coffee-producing regions worldwide.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Organic Farming" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Organic Farming Methods</h3>
+                        <p>Organic coffee production eliminates synthetic pesticides and fertilizers, protecting soil health and biodiversity. Organic farmers use natural methods to manage pests and maintain soil fertility, creating healthier ecosystems. Organic coffee often exhibits unique flavor characteristics and supports the long-term sustainability of coffee-growing regions.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Water Conservation" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Water Conservation</h3>
+                        <p>Coffee processing requires significant water resources. Sustainable practices focus on reducing water consumption and treating wastewater properly to prevent environmental contamination. Innovative processing methods and water recycling systems help minimize the environmental impact of coffee production while maintaining quality standards.</p>
+                    </div>
+                </div>
+
+                <div class="coffee_card_j3m">
+                    <img src="https://images.pexels.com/photos/1447933/pexels-photo-1447933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Community Support" class="card_image_x6l">
+                    <div class="card_content_n1p">
+                        <h3>Community Development</h3>
+                        <p>Sustainable coffee initiatives support community development through education, healthcare, and infrastructure improvements in coffee-growing regions. By investing in local communities, we help create stable, prosperous environments where coffee farming can thrive for generations to come.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer_main_z1m">
+        <div class="footer_content_a4b">
+            <div class="footer_section_e9j">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> <a href="tel:+1-555-0147" class="phone_link_m6k">+1 (555) 0147</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@nexiqhome.com">info@nexiqhome.com</a></p>
+                <p><strong>Address:</strong> 742 Coffee Lane, Brew City, BC 45678</p>
+                <p><strong>Hours:</strong> Mon-Fri: 7AM-8PM, Sat-Sun: 8AM-9PM</p>
+            </div>
+
+            <div class="footer_section_e9j">
+                <h3>Quick Links</h3>
+                <a onclick="scrollToSection('coffee-types')">Coffee Types</a>
+                <a onclick="scrollToSection('brewing')">Brewing Methods</a>
+                <a onclick="scrollToSection('origins')">Coffee Origins</a>
+                <a onclick="scrollToSection('history')">Our History</a>
+                <a onclick="scrollToSection('reviews')">Customer Reviews</a>
+            </div>
+
+            <div class="footer_section_e9j">
+                <h3>Legal</h3>
+                <a onclick="openModal('privacy')">Privacy Policy</a>
+                <a onclick="openModal('terms')">Terms of Service</a>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">© 2024 Nexiq Home Coffee. All rights reserved.</p>
+            </div>
+
+            <div class="footer_section_e9j">
+                <h3>Follow Us</h3>
+                <p>Connect with our community on social media for daily coffee tips, brewing guides, and exclusive content from coffee experts around the world.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Subscribe to our newsletter for updates on new coffee varieties, brewing techniques, and sustainable sourcing initiatives.</p>
+            </div>
+        </div>
+
+        <div class="footer_bottom_r7p">
+            <p>Nexiq Home Coffee | Celebrating Coffee Culture Worldwide | Est. 2010</p>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal_overlay_t5g" id="privacyModal">
+        <div class="modal_content_p9k">
+            <button class="modal_close_b3j" onclick="closeModal('privacy')">&times;</button>
+            <h2>Privacy Policy</h2>
+            
+            <h3>1. Information We Collect</h3>
+            <p>Nexiq Home collects information you provide directly to us, such as when you create an account, subscribe to our newsletter, or contact us with inquiries. This may include your name, email address, phone number, and any other information you choose to provide. We also automatically collect certain information about your device and how you interact with our website, including IP address, browser type, pages visited, and time spent on pages.</p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the information we collect to provide, maintain, and improve our services, process transactions, send promotional communications (with your consent), respond to your inquiries, and comply with legal obligations. Your information helps us personalize your experience and deliver content relevant to your interests in coffee education and products.</p>
+
+            <h3>3. Information Sharing</h3>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website and conducting our business, subject to confidentiality agreements. We may also disclose information when required by law or to protect our rights and safety.</p>
+
+            <h3>4. Data Security</h3>
+            <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security of your data.</p>
+
+            <h3>5. Cookies and Tracking</h3>
+            <p>Our website uses cookies to enhance your browsing experience and analyze site usage. You can control cookie settings through your browser preferences. We also use analytics tools to understand how visitors use our site and to improve our services accordingly.</p>
+
+            <h3>6. Your Rights</h3>
+            <p>Depending on your location, you may have rights regarding your personal information, including the right to access, correct, or delete your data. To exercise these rights, please contact us using the information provided in our contact section. We will respond to your request within the timeframe required by applicable law.</p>
+
+            <h3>7. Changes to This Policy</h3>
+            <p>We may update this privacy policy from time to time to reflect changes in our practices or applicable laws. We will notify you of significant changes by posting the updated policy on our website and updating the effective date. Your continued use of our services constitutes acceptance of the updated policy.</p>
+
+            <h3>8. Contact Us</h3>
+            <p>If you have questions or concerns about our privacy practices, please contact us at <a href="mailto:privacy@nexiqhome.com">privacy@nexiqhome.com</a> or call <a href="tel:+1-555-0147">+1 (555) 0147</a>.</p>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div class="modal_overlay_t5g" id="termsModal">
+        <div class="modal_content_p9k">
+            <button class="modal_close_b3j" onclick="closeModal('terms')">&times;</button>
+            <h2>Terms of Service</h2>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing and using the Nexiq Home website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services. We reserve the right to modify these terms at any time, and your continued use of our services constitutes acceptance of any changes.</p>
+
+            <h3>2. Use License</h3>
+            <p>We grant you a limited, non-exclusive, non-transferable license to access and use our website and services for personal, non-commercial purposes. You agree not to reproduce, duplicate, copy, sell, or exploit any portion of our services without our express written permission.</p>
+
+            <h3>3. User Responsibilities</h3>
+            <p>You agree to use our services only for lawful purposes and in a way that does not infringe upon the rights of others or restrict their use and enjoyment of our services. Prohibited behavior includes harassing or causing distress or inconvenience to any person, transmitting obscene or offensive content, and disrupting the normal flow of dialogue within our community.</p>
+
+            <h3>4. Intellectual Property Rights</h3>
+            <p>All content on the Nexiq Home website, including text, graphics, logos, images, and software, is the property of Nexiq Home or its content suppliers and is protected by international copyright laws. You may not reproduce, distribute, or transmit any content without our prior written permission.</p>
+
+            <h3>5. Limitation of Liability</h3>
+            <p>Nexiq Home provides its services on an "as is" basis without warranties of any kind. We are not liable for any indirect, incidental, special, or consequential damages arising from your use of our services, including loss of data, business interruption, or lost profits, even if we have been advised of the possibility of such damages.</p>
+
+            <h3>6. Third-Party Links</h3>
+            <p>Our website may contain links to third-party websites. We are not responsible for the content, accuracy, or practices of these external sites. Your use of third-party websites is governed by their terms and policies, and we encourage you to review them before providing any personal information.</p>
+
+            <h3>7. Indemnification</h3>
+            <p>You agree to indemnify and hold harmless Nexiq Home, its officers, directors, employees, and agents from any claims, damages, or costs arising from your violation of these terms or your use of our services in a manner that violates applicable laws or infringes upon the rights of others.</p>
+
+            <h3>8. Governing Law</h3>
+            <p>These Terms of Service are governed by and construed in accordance with the laws of the jurisdiction in which Nexiq Home operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+
+            <h3>9. Contact Information</h3>
+            <p>If you have questions about these Terms of Service, please contact us at <a href="mailto:legal@nexiqhome.com">legal@nexiqhome.com</a> or call <a href="tel:+1-555-0147">+1 (555) 0147</a>. We are committed to addressing your concerns promptly and professionally.</p>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function openModal(modalType) {
+            if (modalType === 'privacy') {
+                document.getElementById('privacyModal').classList.add('active_x2m');
+            } else if (modalType === 'terms') {
+                document.getElementById('termsModal').classList.add('active_x2m');
+            }
+        }
+
+        function closeModal(modalType) {
+            if (modalType === 'privacy') {
+                document.getElementById('privacyModal').classList.remove('active_x2m');
+            } else if (modalType === 'terms') {
+                document.getElementById('termsModal').classList.remove('active_x2m');
+            }
+        }
+
+        // Close modal when clicking outside of it
+        window.addEventListener('click', function(event) {
+            const privacyModal = document.getElementById('privacyModal');
+            const termsModal = document.getElementById('termsModal');
+            
+            if (event.target === privacyModal) {
+                privacyModal.classList.remove('active_x2m');
+            }
+            if (event.target === termsModal) {
+                termsModal.classList.remove('active_x2m');
+            }
+        });
+    </script>
+	
+	<a href="/" alt="stats counter free" target="_blank" >
+<img  src="https://sstatic1.histats.com/0.gif?4977134&101" alt="stats counter free" border="0">
+	
+</body>
+</html>
